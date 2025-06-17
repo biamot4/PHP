@@ -1,24 +1,39 @@
 <?php
+
+require 'helpers.php';
+echo "<hr>";
+echo validarEnderecoEmail('ana@example.com');
+echo validarEnderecoEmail('https://google.com');
+
 //Console.log() do php
-echo"";    
-echo"<h1>Hello world</h1>";
-echo"<hr>";
+echo "";
+echo "<h1>Hello world</h1>";
+echo "<hr>";
 //criar variável
-$nome = "Ana";  
+$nome = "Ana";
 $idade = 23;
-echo $nome;  
-echo"<br>";
+echo $nome;
+echo "<br>";
 
 //condicional
-if($nome==='Ana' and $idade===23){  
-//Concatenação
-echo 'Seja bem-vindo(a) '. $nome;
-echo"<br>";
+if ($nome === 'Ana' and $idade === 23) {
+    //Concatenação
+    echo 'Seja bem-vindo(a) ' . $nome;
+    echo "<br>";
 }
 
+/**
+ * Função de saudação
+ * @param string $nome de usuário
+ * @return string mensagem de saudação ou o nome do usuário 
+ * @author Beatriz <beatriz@exemplo.com>
+ */
+
+
 //Função
-function saudacao( string $nome){
-    return "Olá, " . $nome;   
+function saudacao(string $nome)
+{
+    return "Olá, " . $nome;
 }
 
 echo saudacao($nome) . "<br>";
@@ -33,21 +48,20 @@ $arr = array(1, 2, 3, 4, 5);
 $arr2 = [1, 2, 3, 4, 5];
 
 //Encontrando um elemento pela sua posição dentro de um array
-echo  "<br>". $arr[0] . " " . $arr2[1] . "<br>";
+echo "<br>" . $arr[0] . " " . $arr2[1] . "<br>";
 
-foreach($arr2 as $number){
-    echo "Número ". $number . "<br>" ;
+foreach ($arr2 as $number) {
+    echo "Número " . $number . "<br>";
 }
 
 //Criação de array associativo 
-$cadastro =[
+$cadastro = [
     "Nome" => "Beatriz",
     "Idade" => 18,
     "Email" => "beatrizmotasesi@exemple.com"
 ];
 
-    foreach ($cadastro as $key => $dado){
-        echo $key . ": " . $dado . "<br>";
-    }
+foreach ($cadastro as $key => $dado) {
+    echo $key . ": " . $dado . "<br>";
+}
 ?>
-
