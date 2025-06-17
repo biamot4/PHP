@@ -24,6 +24,30 @@ function saudacao( string $nome){
 echo saudacao($nome) . "<br>";
 
 //Debugando variáveis
-var_dump($nome, $idade)
+var_dump($nome, $idade);
 
+//1ª forma de criar array
+$arr = array(1, 2, 3, 4, 5);
+
+//1ª forma de criar array
+$arr2 = [1, 2, 3, 4, 5];
+
+//Encontrando um elemento pela sua posição dentro de um array
+echo  "<br>". $arr[0] . " " . $arr2[1] . "<br>";
+
+foreach($arr2 as $number){
+    echo "Número ". $number . "<br>" ;
+}
+
+//Criação de array associativo 
+$cadastro =[
+    "Nome" => "Beatriz",
+    "Idade" => 18,
+    "Email" => "beatrizmotasesi@exemple.com"
+];
+
+    foreach ($cadastro as $key => $dado){
+        echo $key . ": " . $dado . "<br>";
+    }
 ?>
+
